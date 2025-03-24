@@ -44,4 +44,9 @@ if answer == 'a':
 else:
     print("Oh no you got it wrong!")
 
-print(f"\nGreat!\nYou got {score} / 6")
+if score <= 2:
+    print(f"\n{score} / 6\nKeep trying!")
+elif score <= 4:
+    print(f"\n{score} / 6.\nGood job!")
+else:
+    print(f"\n{score} / 6\nYou're a quiz master!")

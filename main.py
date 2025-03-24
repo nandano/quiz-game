@@ -1,48 +1,26 @@
 print("Welcome to the QUIZ GAME!\nChoose A, B, C or D")
 
+questions = [
+    {"question": "What is the capital of France?", "options": ["A. Berlin", "B. Madrid", "C. Paris", "D. Rome"], "answer": 'C'},
+    {"question": "Which planet is known as the red planet?", "options": ["A. Venus", "B. Mars", "C. Jupiter", "D. Saturn"], "answer": 'B'},
+    {"question": "Who wrote Romeo and Julet?", "options": ["A. Charles Dickens", "B. William Shakespeare", "C. Mark Twain", "D. Jane Austen"], "answer": 'B'},
+    {"question": "What is the largest ocean on Earth?", "options": ["A. Atlantic Ocean", "B. Indian Ocean", "C. Arctic Ocean", "D. Pacific Ocean"], "answer": 'D'},
+    {"question": "Which animal is known as the \"King of the Jungle\"?", "options": ["A. Tiger", "B. Elephant", "C. Lion", "D. Gorilla"], "answer": 'C'},
+    {"question": "What is the Chemical symbol for Gold?", "options": ["A. Au", "B. Ag", "C. Pb", "D. Go"], "answer": 'A'},
+]
+
 score = 0
 
-answer = input("\nWhat is the capital of France?\nA. Berlin\nB. Madrid\nC. Paris\nD. Rome\n").lower()
-if answer == 'c':
-    print("👏 You got it right.\nYou got 1 point.")
-    score += 1
-else:
-    print("Oh no you got it wrong!")
-
-answer = input("\nWhich planet is known as the Red Planet?\nA. Venus\nB. Mars\nC. Jupiter\nD. Saturn\n").lower()
-if answer == 'b':
-    print("👏 You got it right.\nYou got 1 point.")
-    score += 1
-else:
-    print("Oh no you got it wrong!")
-
-answer = input("\nWho wrote Romeo and Juliet?\nA. Charles Dickens\nB. William Shakespeare\nC. Mark Twain\nD. Jane Austen\n").lower()
-if answer == 'b':
-    print("👏 You got it right.\nYou got 1 point.")
-    score += 1
-else:
-    print("Oh no you got it wrong!")
-
-answer = input("\nWhat is the largest ocean on Earth?\nA. Atlantic Ocean\nB. Indian Ocean\nC. Arctic Ocean\nD. Pacific Ocean\n").lower()
-if answer == 'd':
-    print("👏 You got it right.\nYou got 1 point.")
-    score += 1
-else:
-    print("Oh no you got it wrong!")
-
-answer = input("\nWhich animal is known as the \"King of the Jungle\"?\nA. Tiger\nB. Elephant\nC. Lion\nD. Gorilla\n").lower()
-if answer == 'c':
-    print("👏 You got it right.\nYou got 1 point.")
-    score += 1
-else:
-    print("Oh no you got it wrong!")
-
-answer = input("\nWhat is the chemical symbol for gold?\nA. Au\nB. Ag\nC. Pb\nD. Go\n").lower()
-if answer == 'a':
-    print("👏 You got it right.\nYou got 1 point.")
-    score += 1
-else:
-    print("Oh no you got it wrong!")
+for question in questions:
+    print(f"\n{question['question']}")
+    for option in question['options']:
+        print(option)
+    answer = input("Enter the correct option: ")
+    if answer.lower() == question['answer'].lower():
+        print("👏 You got that right!\nYou win 1 point.")
+        score += 1
+    else:
+        print("Oh no you got it wrong.")
 
 if score <= 2:
     print(f"\n{score} / 6\nKeep trying!")

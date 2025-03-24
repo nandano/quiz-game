@@ -1,2 +1,9 @@
-# quiz-game
-Quiz Game is a basic trivia game where players answer questions and earn points for correct answers and see how many you can get right. It's a simple, fun and great way to test your knowledge.
+# Quiz Game
+
+Welcome to the Quiz Game! This is a simple Python-based quiz where players answer multiple-choice questions to test their knowledge.
+
+## Features
+
+- A set of multiple choice questions covering various topics
+- Randomized question order for a unique experience each time you play.
+- Scoring system with encouraging feedback based on performance

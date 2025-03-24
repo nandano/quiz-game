@@ -1,3 +1,5 @@
+import random
+
 print("Welcome to the QUIZ GAME!\nChoose A, B, C or D")
 
 questions = [
@@ -8,6 +10,8 @@ questions = [
     {"question": "Which animal is known as the \"King of the Jungle\"?", "options": ["A. Tiger", "B. Elephant", "C. Lion", "D. Gorilla"], "answer": 'C'},
     {"question": "What is the Chemical symbol for Gold?", "options": ["A. Au", "B. Ag", "C. Pb", "D. Go"], "answer": 'A'},
 ]
+
+random.shuffle(questions)
 
 score = 0
 

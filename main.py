@@ -33,9 +33,9 @@ for question in questions:
         print("Oh no you got it wrong.")
 
 questions_no = len(questions)
-if score <= 4:
+if score <= (questions_no / 3):
     print(f"\n{score} / {questions_no}.\nKeep trying!")
-elif score <= 8:
+elif score <= (questions_no / 2):
     print(f"\n{score} / {questions_no}.\nGood job!")
 else:
     print(f"\n{score} / {questions_no}.\nYou're a quiz master!")
